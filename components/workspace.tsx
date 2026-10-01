@@ -122,7 +122,7 @@ export function Workspace() {
     setCitation(null);
     setPending(null);
     setError(
-      "Your session has expired. Sign in again to continue. Demo work is temporary and may no longer be available.",
+      "Your session has expired :(( . Sign in again to continue. Demo work is temporary and may no longer be available.",
     );
   }, []);
 
@@ -190,12 +190,12 @@ export function Workspace() {
     setBootstrap((current) =>
       current
         ? {
-            ...current,
-            projects: [
-              summarizeProject(next),
-              ...current.projects.filter((item) => item.id !== next.id),
-            ],
-          }
+          ...current,
+          projects: [
+            summarizeProject(next),
+            ...current.projects.filter((item) => item.id !== next.id),
+          ],
+        }
         : current,
     );
   };
